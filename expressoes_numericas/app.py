@@ -1,0 +1,6 @@
+from expressoes_numerica import ExpressoesNumericas
+
+calculando_expressoes = ExpressoesNumericas()
+
+calculando_expressoes.calcular_expressoes1()
+calculando_expressoes.calcular_expressoes2()
