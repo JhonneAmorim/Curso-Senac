@@ -22,10 +22,18 @@ class ContaCorrente(FuncaoDeConta):
   def obter_saldo(self):
     return self.get_saldo()
 
-  def depositar(self, deposito):
-    self.saldo = self.get_saldo() + deposito
+  def depositar(self):
+    opcao = ''
+    while opcao != "N":
+        deposito = int(input("Digite o valor do seu deposito: "))
+        self.saldo = self.get_saldo() + deposito
+        opcao = input("Desejar fazer um novo depostio: S/N?")                        
     return self.get_saldo()
 
-  def sacar(self, saque):
-    self.saldo = self.get_saldo() - (saque * self.get_taxa())
+  def sacar(self):
+    opcao = ''
+    while opcao != "N":
+      saque = int(input("Digite o valor do seu saque: "))
+      self.saldo = self.get_saldo() - (saque + saque * self.get_taxa())
+      opcao = input("Desejar fazer um novo saque: S/N?") 
     return self.get_saldo()
