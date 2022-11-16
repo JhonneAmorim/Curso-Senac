@@ -9,21 +9,10 @@
   <script src='main.js'></script>
 </head>
 <body>
-  <h1>Olá meu nome é, {{ meu_nome }}</h1>
-  <p>Calculando 5 vezes 2 = {{ 5 * 2 }}</p>
-  <p>
-    {% if 7 > 4 %}
-    Sim, 7 é maior do que 4!
-    {% else %}
-    Não! 3 é menor do que 3!
-    {% endif %}
-
-  </p>
-
-  <p>
-    {% for i in range(1, 11) %}
-      listando: {{ i }} <br>
-    {% endfor %}
-  </p>
+  
+  {%for nomes in nome%}
+     <h1>{{nomes}}<h1>
+    
+  {%endfor%}    
 </body>
 </html>
